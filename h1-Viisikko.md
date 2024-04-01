@@ -143,6 +143,38 @@ $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="
 
 Tähän tehtävään kului aikaa 1,5 tuntia, sisältäen 15 min tauon.
 
+## Idempotenssi // klo 17.50
+
+Idempotenssilla tarkoitetaan IT-maailmassa asiaa, esimerkiksi komentoa, joka voidaan toistaa useita kertoja ja lopputulos pysyy aina samana (Siddharth 2023). Käytän esimerkkinä komentoa, jolla luodaan uusi tiedosto. 
+
+```
+$ sudo salt-call --local -l info state.single file.managed /tmp/heijaniikki
+```
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/969d4cd1-2f71-46b1-ae36-6581b4c8ded3)
+
+Tiedosto luotiin. Jos suoritan komennon uudelleen, mitään muutoksia ei tehdä, sillä tiedosto on jo luotu. Halusin luoda uuden tiedoston, loin sen, ja vaikka suorittaisin saman komennon uudelleen lopputulos pysyy samana.
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/033453b6-4cda-4002-bb21-077fc2feaf19)
+
+Tähän tehtävään kului aikaa noin 15 minuuttia.
+
+## D) Tietoja koneesta // klo 18.05
+
+Keräsin tietojani koneesta grains-items-komennolla:
+
+```
+$ salt-call --local grains.items
+$ sudo salt-call --local grains.item biosreleasedate biosversion username
+```
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a4c6d119-3549-41d7-8a9c-0ead8b37ffde)
+
+< - BIOS release date: ohjelmiston julkaisupäivämäärä
+< - BIOS-version: Virtualbox. Virtuaalikone käyttää virtuaalista BIOSia
+< - Username: kertoo käyttäjän käyttäjätunnuksen
+
+
 ## Oma käyttöympäristö
 
 Oman koneen speksit:
@@ -159,3 +191,5 @@ https://docs.oracle.com/cd/E23824_01/html/E21802/gihhp.html
 06.03.2024. https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html
 
 06.03.2024. https://docs.saltproject.io/en/latest/ref/states/all/salt.states.cmd.html#execution-of-arbitrary-commands
+
+Siddharth. Codementor community. The Power of Idempotency: Understanding it's Significance. 18.03.2023. https://www.codementor.io/@sidverma32/the-power-of-idempotency-understanding-its-significance-22zkyc7ci1
