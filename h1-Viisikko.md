@@ -66,13 +66,13 @@ $ sudo salt-call --local -l info state.single pkg.removed tree
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/f541be23-216f-4c14-b696-f924bd269b99)
 
-_- ID: Komennon tehtävä, tunniste_
-_- Function: Mikä funktio on kyseessä_
-_- Result: Onnistuiko toimenpide_
-_- Comment: Mahdolliset lisätiedot_
-_- Started: Milloin toimenpide aloitettiin_
-_- Duration: Kauanko toimenpide kesti_
-_- Changes: Mahdolliset muutokset_
+> - ID: Komennon tehtävä, tunniste
+- Function: Mikä funktio on kyseessä
+- Result: Onnistuiko toimenpide
+- Comment: Mahdolliset lisätiedot
+- Started: Milloin toimenpide aloitettiin
+- Duration: Kauanko toimenpide kesti
+- Changes: Mahdolliset muutokset
 
 File-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto.
 
