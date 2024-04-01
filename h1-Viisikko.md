@@ -11,7 +11,7 @@ $ salt-call --version
 
 ## B) Hello Vagrant
 Koneelleni on jo asennettu Virtualbox. Lähden asentamaan Vagrantia ja raportoin asennuksen alapuolelle.
-### Vagrantin asennus // klo 13.50
+### Vagrantin asennus // klo 15.50
 Lähden asentamaan Vagrantia. Siirryn sivustolle https://developer.hashicorp.com/vagrant/install . Valitsen Windows-paketin ja lähden suorittamaan asennusta. 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/b0e738da-ebe8-477e-9048-620069b3f258)
@@ -25,7 +25,7 @@ $ vagrant --version
 ```
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/08562c7f-1632-4f31-af8d-46b1b208e9bc)
 
-## C) Uusi virtuaalikone Vagrantin avulla // klo 14.08
+## C) Uusi virtuaalikone Vagrantin avulla // klo 16.08
 Avaan isäntäkoneellani Powershellin pääkäyttäjän oikeuksin. Luon uuden virtuaalikoneen syöttämällä komentoriville seuraavat komennot:
 
 ```
@@ -41,7 +41,7 @@ $ vagrant ssh
 
 Tähän kului aikaa noin 5 minuuttia.
 
-## A) Saltin asennus Linuxille // klo 14.16
+## A) Saltin asennus Linuxille // klo 16.16
 Lähden asentamaan Saltia juuri luomalleni virtuaalikoneelle.
 
 ```
@@ -53,7 +53,7 @@ Tähän kului aikaa noin 4 minuuttia.
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/1548cdbe-f7d0-4e23-a139-bca84d052238)
 
-## B) Salt ja pkg, file, service, user & cmd // klo 14.22
+## B) Salt ja pkg, file, service, user & cmd // klo 16.22
 
 Aloitin pkg-komennosta. Komennolla voidaan asentaa ja poistaa paketteja (Oracle).
 
