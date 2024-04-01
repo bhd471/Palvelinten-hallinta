@@ -141,7 +141,7 @@ $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="
 > - Duration: Kauanko toimenpide kesti
 > - Changes: Mahdolliset muutokset
 
-
+Tähän tehtävään kului aikaa 1,5 tuntia, sisältäen 15 min tauon.
 
 ## Oma käyttöympäristö
 
