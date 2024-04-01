@@ -1,5 +1,5 @@
 # H1 - Viisikko
-Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avulla uuden virtuaalikoneen ja asensin tälle uudelle koneelle Saltin. Esittelin Saltin tärkeimmät tilafunktiot, tutkin idempotenssia sekä keräsin hieman tietoja uudesta virtuaalikoneestani grains.items-menetelmällä. Suoritin tehtävän 01.04.2024. klo 15.45-18.30.
+Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avulla uuden virtuaalikoneen ja asensin tälle uudelle koneelle Saltin. Esittelin Saltin tärkeimmät funktiot, tutkin idempotenssia sekä keräsin hieman tietoja uudesta virtuaalikoneestani grains.items-menetelmällä. Suoritin tehtävän 01.04.2024. klo 15.45-18.30.
 ## X) Tiivistelmä
 ### [Create a Web Page Using Github](https://terokarvinen.com/2023/create-a-web-page-using-github/)
 
@@ -25,7 +25,7 @@ Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avul
 
 ## A) Hello Windows Salt world
 
-Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avaan Windows Powershellin pääkäyttäjänä. 
+Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avasin Windows Powershellin pääkäyttäjänä. 
 
 Tarkistin vielä komennolla Saltin asennuksen:
 
@@ -37,11 +37,11 @@ $ salt-call --version
 ## B) Hello Vagrant
 Koneelleni on jo asennettu Virtualbox. Lähden asentamaan Vagrantia ja raportoin asennuksen alapuolelle.
 ### Vagrantin asennus // klo 15.50
-Lähden asentamaan Vagrantia. Siirryn sivustolle https://developer.hashicorp.com/vagrant/install . Valitsen Windows-paketin ja lähden suorittamaan asennusta. 
+Lähdin asentamaan Vagrantia. Siirryin sivustolle https://developer.hashicorp.com/vagrant/install . Valitsin Windows-paketin ja lähdin suorittamaan asennusta. 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/b0e738da-ebe8-477e-9048-620069b3f258)
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/27322357-5c62-4157-80dc-7e2442149188)
-Latauksessa kesti noin 2 min. Joudun käynnistämään koneeni uudelleen, jotta asennus astuu voimaan. Tähän koko hommaan kului aikaa noin 6 minuuttia.
+Latauksessa kesti noin 2 min. Jouduin käynnistämään koneeni uudelleen, jotta asennus astuu voimaan. Tähän koko hommaan kului aikaa noin 6 minuuttia.
 
 ### Vagrant toimii
 Tarkistetaan vielä komennon avulla, että Vagrant toimii:
@@ -51,13 +51,13 @@ $ vagrant --version
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/08562c7f-1632-4f31-af8d-46b1b208e9bc)
 
 ## C) Uusi virtuaalikone Vagrantin avulla // klo 16.08
-Avaan isäntäkoneellani Powershellin pääkäyttäjän oikeuksin. Luon uuden virtuaalikoneen syöttämällä komentoriville seuraavat komennot:
+Avasin isäntäkoneellani Powershellin pääkäyttäjän oikeuksin. Loin uuden virtuaalikoneen syöttämällä komentoriville seuraavat komennot:
 
 ```
 $ vagrant init debian/bullseye64
 $ vagrant up
 ```
-Kirjaudun sisään virtuaalikoneelle ssh:n avulla
+Kirjauduin sisään virtuaalikoneelle ssh:n avulla
 ```
 $ vagrant ssh
 ```
@@ -67,7 +67,7 @@ $ vagrant ssh
 Tähän kului aikaa noin 5 minuuttia.
 
 ## A) Saltin asennus Linuxille // klo 16.16
-Lähden asentamaan Saltia juuri luomalleni virtuaalikoneelle.
+Lähdin asentamaan Saltia juuri luomalleni virtuaalikoneelle.
 
 ```
 $ sudo apt-get update
@@ -80,7 +80,7 @@ Tähän kului aikaa noin 4 minuuttia.
 
 ## B) Salt ja pkg, file, service, user & cmd // klo 16.22
 
-Aloitin **pkg**-komennosta. Komennolla voidaan asentaa ja poistaa paketteja (Oracle).
+Aloitin **pkg**-komennosta. Komennolla voidaan asentaa ja poistaa paketteja (Salt Project 2024).
 
 
 ```
@@ -99,7 +99,7 @@ $ sudo salt-call --local -l info state.single pkg.removed tree
 > - Duration: Kauanko toimenpide kesti
 > - Changes: Mahdolliset muutokset
 
-**File**-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto.
+**File**-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luotiin tiedosto.
 
 ```
 $ sudo salt-call --local -l info state.single file.managed /tmp/moijanika
@@ -213,10 +213,25 @@ Oman koneen speksit:
 
 ### Lähdeluettelo
 
-https://docs.oracle.com/cd/E23824_01/html/E21802/gihhp.html
+Karvinen, T. 21.03.2024. H1 - Viisikko, Palvelinten hallinta -kurssi. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/
+Luettu 01.04.2024.
 
-06.03.2024. https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html
+Karvinen, T. 28.03.2023. Create a Web Page Using Github. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2023/create-a-web-page-using-github/ 
+Luettu 01.04.2024.
 
-06.03.2024. https://docs.saltproject.io/en/latest/ref/states/all/salt.states.cmd.html#execution-of-arbitrary-commands
+Karvinen, T. 04.06.2006. Raportin kirjoittaminen. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/
+Luettu 01.04.2024.
 
-Siddharth. Codementor community. The Power of Idempotency: Understanding it's Significance. 18.03.2023. https://www.codementor.io/@sidverma32/the-power-of-idempotency-understanding-its-significance-22zkyc7ci1
+Karvinen, T. 20.10.2024. Run Salt Command Locally. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2021/salt-run-command-locally/
+Luettu 01.04.2024.
+
+Salt Project. 06.03.2024. Installation of packages using os package managers such as yam or apt-get. Salt.states.pkg. Luettavissa: https://docs.saltproject.io/en/latest/ref/states/all/salt.states.pkg.html
+Luettu 01.04.2024.
+
+Salt Project. 06.03.2024. Operations on regular files, special files, directories and symlinks. Salt.states.file. Luettavissa: https://docs.saltproject.io/en/latest/ref/states/all/salt.states.file.html
+Luettu 01.04.2024.
+
+Salt Project. 06.03.2024. Execution of arbitrary commands. Salt.states.cmd. Luettavissa: https://docs.saltproject.io/en/latest/ref/states/all/salt.states.cmd.html#execution-of-arbitrary-commands
+
+Siddharth. 18.03.2023. Codementor community. The Power of Idempotency: Understanding it's Significance. Luettavissahttps://www.codementor.io/@sidverma32/the-power-of-idempotency-understanding-its-significance-22zkyc7ci1
+Luettu 01.04.2024.
