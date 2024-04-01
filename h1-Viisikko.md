@@ -67,18 +67,43 @@ $ sudo salt-call --local -l info state.single pkg.removed tree
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/f541be23-216f-4c14-b696-f924bd269b99)
 
 
-File-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto, lisätään sisältöä ja poistetaan tiedosto. 
+File-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto.
 
 ```
 $ sudo salt-call --local -l info state.single file.managed /tmp/moijanika
-$ sudo salt-call --local -l info state.single file.managed /tmp/moijanika contents="foo"
-$ sudo salt-call --local -l info state.single file.absent /tmp/moijanika
-```
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install salt-minion
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/ea64263b-b248-4f5c-a581-c62fe0fbea21)
+Luotu tiedosto
+
+
+Service-komennolla voidaan käynnistää tai sulkea palveluita, tässä tapauksessa tällä komennolla voidaan käynnistää Apache ja muuttaa määrityksiä niin, että se käynnistyy automaattisesti virtuaalikoneen käynnistyessä (Salt Project 2024). Apachea ei kuitenkaan ole asennettuna tälle virtuaalikoneelle. 
+
 ```
+$ sudo salt-call --local -l info state.single service.running apache2 enable=True
+```
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/0824d7ee-6c5c-489f-a164-81729a6a4efe)
+
+User-komennolla hallinnoidaan käyttäjätilejä. Alla oleva komento luo uuden käyttäjän.
+```
+$ sudo salt-call --local -l info state.single user.present janiikki
+
+```
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/26655a3c-81ec-40c6-9b79-a4e37826a4a3)
+
+Cmd-komennolla hallinnoidaan suoritettuja komentoja. Se voi määrätä komentoja suoritettavaksi tietyissä tilanteissa, tai esimerkiksi tiettyjen ehtojen täytyttyä. Alla oleva komento määrittää, että ´touch /tmp/foo´ luo tiedoston
+
+```
+$ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
+
+```
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6291b868-bf1f-4557-b0e1-675a786f1a17)
+
+
 
 
 ## Oma käyttöympäristö
