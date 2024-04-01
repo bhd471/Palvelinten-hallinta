@@ -55,7 +55,7 @@ Tähän kului aikaa noin 4 minuuttia.
 
 ## B) Salt ja pkg, file, service, user & cmd // klo 16.22
 
-Aloitin pkg-komennosta. Komennolla voidaan asentaa ja poistaa paketteja (Oracle).
+Aloitin **pkg**-komennosta. Komennolla voidaan asentaa ja poistaa paketteja (Oracle).
 
 
 ```
@@ -74,7 +74,7 @@ $ sudo salt-call --local -l info state.single pkg.removed tree
 > - Duration: Kauanko toimenpide kesti
 > - Changes: Mahdolliset muutokset
 
-File-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto.
+**File**-komennolla voidaan hallita tiedostoja (Salt Project, 2024). Tässä tapauksessa luodaan tiedosto.
 
 ```
 $ sudo salt-call --local -l info state.single file.managed /tmp/moijanika
@@ -92,7 +92,7 @@ $ sudo salt-call --local -l info state.single file.managed /tmp/moijanika
 > - Changes: Mahdolliset muutokset
 
 
-Service-komennolla voidaan käynnistää tai sulkea palveluita, tässä tapauksessa tällä komennolla voidaan käynnistää Apache ja muuttaa määrityksiä niin, että se käynnistyy automaattisesti virtuaalikoneen käynnistyessä (Salt Project 2024). Apachea ei kuitenkaan ole asennettuna tälle virtuaalikoneelle. 
+**Service**-komennolla voidaan käynnistää tai sulkea palveluita, tässä tapauksessa tällä komennolla voidaan käynnistää Apache ja muuttaa määrityksiä niin, että se käynnistyy automaattisesti virtuaalikoneen käynnistyessä (Salt Project 2024). Apachea ei kuitenkaan ole asennettuna tälle virtuaalikoneelle. 
 
 ```
 $ sudo salt-call --local -l info state.single service.running apache2 enable=True
@@ -108,7 +108,7 @@ $ sudo salt-call --local -l info state.single service.running apache2 enable=Tru
 > - Duration: Kauanko toimenpide kesti
 > - Changes: Mahdolliset muutokset
 
-User-komennolla hallinnoidaan käyttäjätilejä. Alla oleva komento luo uuden käyttäjän.
+**User**-komennolla hallinnoidaan käyttäjätilejä. Alla oleva komento luo uuden käyttäjän.
 ```
 $ sudo salt-call --local -l info state.single user.present janiikki
 
@@ -124,7 +124,7 @@ $ sudo salt-call --local -l info state.single user.present janiikki
 > - Duration: Kauanko toimenpide kesti
 > - Changes: Mahdolliset muutokset
 
-Cmd-komennolla hallinnoidaan suoritettuja komentoja. Se voi määrätä komentoja suoritettavaksi tietyissä tilanteissa, tai esimerkiksi tiettyjen ehtojen täytyttyä (Salt Project 2024). Alla oleva komento määrittää, että ´touch /tmp/foo´ luo tiedoston
+**Cmd**-komennolla hallinnoidaan suoritettuja komentoja. Se voi määrätä komentoja suoritettavaksi tietyissä tilanteissa, tai esimerkiksi tiettyjen ehtojen täytyttyä (Salt Project 2024). Alla oleva komento määrittää, että ´touch /tmp/foo´ luo tiedoston
 
 ```
 $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="/tmp/foo"
