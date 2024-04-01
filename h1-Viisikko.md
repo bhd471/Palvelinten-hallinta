@@ -1,3 +1,5 @@
+# H1 - Viisikko
+Tämän viikon kotitehtävissä asensin Vagrantin, loin sen avulla uuden virtuaalikoneen ja asensin tälle uudelle koneelle Saltin. Esittelin Saltin tärkeimmät tilafunktiot, tutkin idempotenssia sekä keräsin hieman tietoja uudesta virtuaalikoneestani grains.items-menetelmällä (Karvinen 2024). Suoritin tehtävän 01.04.2024. klo 15.45-18.30.
 ## A) Hello Windows Salt world
 
 Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avaan Windows Powershellin pääkäyttäjänä. 
@@ -170,9 +172,9 @@ $ sudo salt-call --local grains.item biosreleasedate biosversion username
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a4c6d119-3549-41d7-8a9c-0ead8b37ffde)
 
-< - BIOS release date: ohjelmiston julkaisupäivämäärä
-< - BIOS-version: Virtualbox. Virtuaalikone käyttää virtuaalista BIOSia
-< - Username: kertoo käyttäjän käyttäjätunnuksen
+> - BIOS release date: ohjelmiston julkaisupäivämäärä
+> - BIOS-version: Virtualbox. Virtuaalikone käyttää virtuaalista BIOSia
+> - Username: kertoo käyttäjän käyttäjätunnuksen
 
 
 ## Oma käyttöympäristö
@@ -185,6 +187,8 @@ Oman koneen speksit:
 - NVIDIA GeForce RTX 3060 Ti-näytönohjain
 - 16 Gt RAM-muistia
 - 1 TB tallennustilaa
+
+### Lähdeluettelo
 
 https://docs.oracle.com/cd/E23824_01/html/E21802/gihhp.html
 
