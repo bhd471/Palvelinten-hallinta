@@ -37,7 +37,7 @@ $ salt-call --version
 ## B) Hello Vagrant
 Koneelleni on jo asennettu Virtualbox. Lähden asentamaan Vagrantia ja raportoin asennuksen alapuolelle.
 ### Vagrantin asennus // klo 15.50
-Lähdin asentamaan Vagrantia. Siirryin sivustolle https://developer.hashicorp.com/vagrant/install . Valitsin Windows-paketin ja lähdin suorittamaan asennusta. 
+Lähdin asentamaan Vagrantia. Siirryin sivustolle https://developer.hashicorp.com/vagrant/install .Valitsin Windows-paketin ja lähdin suorittamaan asennusta. 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/b0e738da-ebe8-477e-9048-620069b3f258)
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/27322357-5c62-4157-80dc-7e2442149188)
