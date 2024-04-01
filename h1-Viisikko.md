@@ -1,6 +1,10 @@
 ## A) Hello Windows Salt world
 
 Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avaan Windows Powershellin pääkäyttäjänä. 
+
+```
+salt-call --version
+```
 ## Oma käyttöympäristö
 
 Oman koneen speksit:
