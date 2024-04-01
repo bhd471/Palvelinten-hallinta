@@ -1,5 +1,8 @@
 # H1 - Viisikko
 Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avulla uuden virtuaalikoneen ja asensin tälle uudelle koneelle Saltin. Esittelin Saltin tärkeimmät tilafunktiot, tutkin idempotenssia sekä keräsin hieman tietoja uudesta virtuaalikoneestani grains.items-menetelmällä. Suoritin tehtävän 01.04.2024. klo 15.45-18.30.
+## X) Tiivistelmä
+###[Create a Web Page USing Github](https://terokarvinen.com/2023/create-a-web-page-using-github/)
+
 ## A) Hello Windows Salt world
 
 Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avaan Windows Powershellin pääkäyttäjänä. 
