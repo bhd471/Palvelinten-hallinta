@@ -4,7 +4,7 @@ Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avul
 
 Lähtötilanne on se, että Salt on onnistuneesti asennettu työasemalle. Avaan Windows Powershellin pääkäyttäjänä. 
 
-Tarkistin komennolla vielä Saltin asennuksen:
+Tarkistin vielä komennolla Saltin asennuksen:
 
 ```
 $ salt-call --version
