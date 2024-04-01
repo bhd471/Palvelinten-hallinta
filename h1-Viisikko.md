@@ -232,6 +232,7 @@ Salt Project. 06.03.2024. Operations on regular files, special files, directorie
 Luettu 01.04.2024.
 
 Salt Project. 06.03.2024. Execution of arbitrary commands. Salt.states.cmd. Luettavissa: https://docs.saltproject.io/en/latest/ref/states/all/salt.states.cmd.html#execution-of-arbitrary-commands
+Luettu 01.04.2024.
 
-Siddharth. 18.03.2023. Codementor community. The Power of Idempotency: Understanding it's Significance. Luettavissahttps://www.codementor.io/@sidverma32/the-power-of-idempotency-understanding-its-significance-22zkyc7ci1
+Siddharth. 18.03.2023. Codementor community. The Power of Idempotency: Understanding it's Significance. Luettavissa: https://www.codementor.io/@sidverma32/the-power-of-idempotency-understanding-its-significance-22zkyc7ci1
 Luettu 01.04.2024.
