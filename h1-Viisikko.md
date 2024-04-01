@@ -75,7 +75,7 @@ $ sudo salt-call --local -l info state.single file.managed /tmp/moijanika
 ```
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/ea64263b-b248-4f5c-a581-c62fe0fbea21)
-Luotu tiedosto
+<- Luotu tiedosto
 
 
 Service-komennolla voidaan käynnistää tai sulkea palveluita, tässä tapauksessa tällä komennolla voidaan käynnistää Apache ja muuttaa määrityksiä niin, että se käynnistyy automaattisesti virtuaalikoneen käynnistyessä (Salt Project 2024). Apachea ei kuitenkaan ole asennettuna tälle virtuaalikoneelle. 
