@@ -1,7 +1,27 @@
 # H1 - Viisikko
 Tämän viikon kotitehtävissä (Karvinen 2024) asensin Vagrantin, loin sen avulla uuden virtuaalikoneen ja asensin tälle uudelle koneelle Saltin. Esittelin Saltin tärkeimmät tilafunktiot, tutkin idempotenssia sekä keräsin hieman tietoja uudesta virtuaalikoneestani grains.items-menetelmällä. Suoritin tehtävän 01.04.2024. klo 15.45-18.30.
 ## X) Tiivistelmä
-###[Create a Web Page USing Github](https://terokarvinen.com/2023/create-a-web-page-using-github/)
+### [Create a Web Page Using Github](https://terokarvinen.com/2023/create-a-web-page-using-github/)
+
+- Sivun luominen Githubiin on nopeaa ja yksinkertaista
+- Kirjaudutaan sisään Githubiin
+- Luodaan uusi julkinen repositorio, on tärkeää muistaa luoda myös samalla README-tiedosto
+- Siirry repositorioon ja luo uusi tiedosto
+- Muista tallentaa sivu "Commit"-napilla
+
+### [Raportin kirjoittaminen](https://terokarvinen.com/2006/06/04/raportin-kirjoittaminen-4/)
+
+- Raporttia tulisi kirjoittaa samalla kun suorittaa
+- Sen tulisi olla niin toistettava, että joku voisi tehdä saman asian pelkästään raportin perusteella
+- Muista oikeinkirjoitus, väliotsikot sekä lähdeviitteet
+  
+
+### [Run Salt Command Locally](https://terokarvinen.com/2021/salt-run-command-locally/)
+
+- Salt voidaan asentaa Linuxille komennoilla ``sudo apt-get update`` ja ``sudo apt-get -y install salt-minion``
+- Asennuksen voi tarkistaa komennolla ``sudo salt-call --version``
+- Pkg, file, service, user ja cmd ovat tärkeimpiä Salt funktioita
+  
 
 ## A) Hello Windows Salt world
 
