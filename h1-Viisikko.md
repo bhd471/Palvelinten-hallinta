@@ -168,7 +168,7 @@ $ sudo salt-call --local -l info state.single cmd.run 'touch /tmp/foo' creates="
 
 Tähän tehtävään kului aikaa 1,5 tuntia, sisältäen 15 min tauon.
 
-## Idempotenssi // klo 17.50
+## C) Idempotenssi // klo 17.50
 
 Idempotenssilla tarkoitetaan IT-maailmassa asiaa, esimerkiksi komentoa, joka voidaan toistaa useita kertoja ja lopputulos pysyy aina samana (Siddharth 2023). Käytän esimerkkinä komentoa, jolla luodaan uusi tiedosto. 
 
