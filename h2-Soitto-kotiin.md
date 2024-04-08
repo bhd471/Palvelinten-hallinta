@@ -1,3 +1,10 @@
+# H2 - Soitto kotiin
+
+X) Tiivistelmä
+
+[Two machine virtual network with Debian 11 Bullseye and Vagrant](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/)
+
+
 ### Lähdeluettelo
 
 Karvinen, T. H2 - Soitto kotiin. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/
