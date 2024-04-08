@@ -8,12 +8,34 @@ X) Tiivistelmä
 - Voidaan asentaa komennoilla ```sudo apt-get update``` ja ```sudo apt-get install vagrant virtualbox```
 - Voimme hallita Vagrantin avulla myös kahta virtuaalikonetta
 
-A) Aloitin tehtävän suorittamisen klo 18.00
+A) Aloitin tehtävän suorittamisen klo 18.20
+Avasin Powershellin ylläpitäjänä, ja siirryin kotihakemistooni komennolla:
+
+        $ cd C:\Users\janik
+Loin uuden hakemiston "palvelintenhallinta" ja kansioon hakemiston "twohost"
+
+        mkdir C:\Users\janik\palvelintenhallinta\twohost
+
+Loin Vagrantilla uuden virtuaalikoneen
+
+        $ vagrant init debian/bullseye64
+
+
+
+Avasin notepadin, ja loin uuden Vagrantfile-tekstitiedoston
+
+        $ notepad Vagrantfile
+
+
+        
 loin uuden virtuaalikoneen Vagrantin avulla. 
 
         $ vagrant init debian/bullseye64
         $ vagrant up
 
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/81b1d361-a138-4456-955a-d23520248859)
 
 ### Lähdeluettelo
 
