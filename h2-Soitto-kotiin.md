@@ -4,6 +4,16 @@ X) Tiivistelmä
 
 ## [Two machine virtual network with Debian 11 Bullseye and Vagrant](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/)
 
+- Vagrantin avulla voidaan luoda uusia virtuaalikoneita minuuteissa
+- Voidaan asentaa komennoilla ```sudo apt-get update``` ja ```sudo apt-get install vagrant virtualbox```
+- Voimme hallita Vagrantin avulla myös kahta virtuaalikonetta
+
+A) Aloitin tehtävän suorittamisen klo 18.00
+loin uuden virtuaalikoneen Vagrantin avulla. 
+
+        $ vagrant init debian/bullseye64
+        $ vagrant up
+
 
 ### Lähdeluettelo
 
