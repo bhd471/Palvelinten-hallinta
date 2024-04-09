@@ -1,6 +1,6 @@
 # H2 - Soitto kotiin
 Tämän viikon kotitehtävissä (Karvinen 2024) loin kaksi uutta virtuaalikonetta, joita hallitsin samassa verkossa. Asensin näiden koneiden välille master-slave arkkitehtuurin ja suoritin shell-, ja idempotentteja komentoja masterilla master-slave yhteyden yli. Selvitin orjan teknisiä tietoja. Suoritin tehtävän 09.04.2024. klo 11.00-13.45.
-X) Tiivistelmä
+## X) Tiivistelmä
 
 ## [Two machine virtual network with Debian 11 Bullseye and Vagrant](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/)
 
