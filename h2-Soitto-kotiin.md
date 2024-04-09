@@ -1,12 +1,30 @@
 # H2 - Soitto kotiin
-
+Tämän viikon kotitehtävissä (Karvinen 2024) loin kaksi uutta virtuaalikonetta, joita hallitsin samassa verkossa. Asensin näiden koneiden välille master-slave arkkitehtuurin ja suoritin shell-, ja idempotentteja komentoja masterilla master-slave yhteyden yli. Selvitin orjan teknisiä tietoja. Suoritin tehtävän 09.04.2024. klo 11.00-13.45.
 X) Tiivistelmä
 
 ## [Two machine virtual network with Debian 11 Bullseye and Vagrant](https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/)
 
 - Vagrantin avulla voidaan luoda uusia virtuaalikoneita minuuteissa
 - Voidaan asentaa komennoilla ```sudo apt-get update``` ja ```sudo apt-get install vagrant virtualbox```
-- Voimme hallita Vagrantin avulla myös kahta virtuaalikonetta
+- Luomalla uuden hakemiston ja tallentamalla sinne tiedoston Vagrantfile, voidaan hallita kahta virtuaalikonetta
+- Koneille kirjaudutaan ssh-yhteyden avulla ```vagrant ssh koneennimi``
+- Uuden koneen luominen ```vagrant up```
+- Seuratessa artikkelia ja tehdessä hommia tuntui, että tipuin hieman kärryiltä
+
+## [Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux](https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux)
+
+- Saltin avulla voidaan hallita useita virtuaalikoneita
+- Voit asentaa masterin komennolla ```sudo apt-get -y install salt-master``` ja slaven komennolla ```sudo apt-get -y install salt-minion```
+- Slave Key hyväksytään komennolla ```sudo salt-key -A```
+- Mielestäni artikkeli oli helposti seurattava ja riittävän yksinkertainen
+
+## [Hello Salt Infra-as-Code](https://terokarvinen.com/2024/hello-salt-infra-as-code/)
+
+- Luodaan uusi tila, joka varmistaa tekstitiedon olemassaolon
+- Uusi moduuli luodaan komennolla ```sudo mkdir -p /srv/salt/hello/```
+- Avataan tekstieditori ja lisätään sinne koodia ```sudoedit init.sls```
+- Ajetaan ```sudo salt-call --local state.apply hello```
+
 
 ## A) Kaksi virtuaalikonetta samassa verkossa // klo 11.00
 
@@ -180,7 +198,19 @@ Siirryttyäni hakemistoon suoritin komennon, joka avaa tekstieditorin. Lisäsin 
 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/87477c92-cbae-4140-aefd-db0c5e6456b2)
+
 Tämä ei jostain syystä toimi. // Klo 13.30
+
+## Oma käyttöympäristö
+
+Oman koneen speksit:
+
+- Acer Nitro N50-620 työasema
+- Windows 11 käyttöjärjestelmä
+- Intel Core i5-prosessori
+- NVIDIA GeForce RTX 3060 Ti-näytönohjain
+- 16 Gt RAM-muistia
+- 1 TB tallennustilaa
 
 ### Lähdeluettelo
 
@@ -193,3 +223,5 @@ Luettu: 08.04.2024.
 Karvinen, T. 28.03.2018. Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux
 Luettu 08.04.2024.
 
+Karvinen, T. 03.04.2024. Hello Salt Infra-as-Code. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/hello-salt-infra-as-code/
+Luettu 09.04.2024.
