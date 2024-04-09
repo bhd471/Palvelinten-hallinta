@@ -73,6 +73,25 @@ Siirryin koneelle t001 ja tein siitä masterin. Päivitin pakettilistat, asensin
         $ sudo apt-get -y install salt-master
         $ hostname -I 
 
+Tämän jälkeen siirryin koneelle t002 ja tein siitä slaven. Päivitin pakettilistat ja asensin salt-minionin
+
+        $ vagrant ssh t002
+        $ sudo apt-get update
+        $ sudo apt-get -y install salt-minion
+        
+Yhdistin masterin ja slaven kirjoittamalla tekstitiedostoon masterin IP-osoitteen. Käynnistin slaven uudelleen, jotta se yhdistyy masteriin
+
+        $ sudoedit /etc/salt/minion
+        
+        $ sudo systemctl restart salt-minion.service
+        
+Kirjauduin sisään master-koneelle hyväksyäkseni slave keyn
+
+        $ vagrant ssh t001
+        $ sudo salt-key -A
+
+ 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/82247971-630e-46ae-8368-4b8bec5d32d1)
 
 ### Lähdeluettelo
 
