@@ -8,7 +8,7 @@ X) Tiivistelmä
 - Voidaan asentaa komennoilla ```sudo apt-get update``` ja ```sudo apt-get install vagrant virtualbox```
 - Voimme hallita Vagrantin avulla myös kahta virtuaalikonetta
 
-A) Aloitin tehtävän suorittamisen klo 11.00
+## A) Aloitin tehtävän suorittamisen klo 11.00
 
 Avasin Powershellin ylläpitäjänä, ja siirryin kotihakemistooni komennolla:
 
@@ -63,6 +63,16 @@ Tämä onnistui.
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/4a2c94d1-2b35-432a-a879-93a37c31051e)
 
 Tähän tehtävään kului aikaa n. 25 minuuttia.
+
+## B) Salt master-slave // klo 11.30
+
+Siirryin koneelle t001 ja tein siitä masterin
+
+        $ vagrant ssh t001 // kirjauduin sisään
+        $ sudo apt-get update
+        $ hostname -I 
+
+
 ### Lähdeluettelo
 
 Karvinen, T. H2 - Soitto kotiin. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/
