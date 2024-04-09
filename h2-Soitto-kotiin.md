@@ -66,10 +66,11 @@ Tähän tehtävään kului aikaa n. 25 minuuttia.
 
 ## B) Salt master-slave // klo 11.30
 
-Siirryin koneelle t001 ja tein siitä masterin
+Siirryin koneelle t001 ja tein siitä masterin. Päivitin pakettilistat, asensin salt-masterin ja tarkistin ip-osoitteen (10.0.2.15 192.168.88.101)
 
-        $ vagrant ssh t001 // kirjauduin sisään
+        $ vagrant ssh t001
         $ sudo apt-get update
+        $ sudo apt-get -y install salt-master
         $ hostname -I 
 
 
