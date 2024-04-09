@@ -90,8 +90,79 @@ Kirjauduin sisään master-koneelle hyväksyäkseni slave keyn
         $ vagrant ssh t001
         $ sudo salt-key -A
 
- 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/82247971-630e-46ae-8368-4b8bec5d32d1)
+Testasin master-koneella toimiiko
+
+        $ sudo salt '*' cmd.run 'whoami'
+
+Toimii! 
+
+ ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/7d94df89-3fae-454c-b4ac-466b34277ee6)
+
+ Tähän tehtävään kului aikaa n. 30 minuuttia.
+
+## C) Shell-komento slavella klo 12.15
+
+Suoritin masterilla komennon
+
+        $ sudo salt 'janika' cmd.run 'ls -l'
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2c56391b-2d26-4f12-b7ca-f5b61e783307)
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/c78ab0da-714a-4a64-9cf3-23c1cacac9b1)
+
+
+Tähän tehtävään kului aikaa n. 10 minuuttia
+
+## D) Idempotentit komennot // klo 12.25
+
+Suoritan masterilla komennon, joka luo uuden tiedoston. Kun suoritin komennon uudelleen, se ei enää tehnyt mitään, koska asennus oli jo tehty.
+
+
+
+        $ sudo salt 'janika' -l info state.single file.managed /tmp/moikka
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a34054a1-4a8a-4b1d-8604-5bff7922e688)
+
+Tarkistin, että komento onnistui orjassa
+
+        $ vagrant ssh t002
+        $ ls -l /tmo/moikka
+        
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/cc37bb70-59b8-478a-8646-6cd64cd0cb48)
+
+Suoritan komennon, joka asentaa paketin tree slave-koneelle. Kun suoritin komennon uudelleen, se ei enää tehnyt mitään, koska asennus oli jo tehty.
+
+        $ sudo salt-call 'janika' -l info state.single pkg.installed tree
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/42e67608-0dd1-41b9-b8fa-65f1187d0b33)
+
+Tarkistin asennuksen komennolla 
+
+        $ sudo salt 'janika' cmd.run 'tree --version'
+        
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/c52d4216-4f05-4233-9a36-bbe37522340f)
+
+Tähän tehtävään kului aikaa n. 25 minuuttia.
+
+## E) Orjan tekniset tiedot // klo 12.50
+
+Hain master-koneella slaven teknisiä tietoja komennolla 
+
+        $ sudo salt 'janika' grains.items
+        
+Valitsin tarkempaan tarkasteluun muutamat tiedot
+
+        $ sudo salt 'janika' grains.item os saltversion kernel
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/257fa709-faae-46fe-a51e-6b13c5c1b20e)
+
+> - Kernel: Käyttöjärjestelmän ydin
+> - Os: Käyttöjärjestelmä
+> - Saltversion: Käytössä oleva versio Saltista
+
+Tähän tehtävään kului aikaa n. 10 minuuttia.
+
+## F) Hello IaC // Tämä tehtävä puuttuu
 
 ### Lähdeluettelo
 
