@@ -100,7 +100,7 @@ Toimii!
 
 ## C) Shell-komento slavella // klo 12.15
 
-Suoritin masterilla komennon
+Suoritin masterilla komennon, joka listaa hakemistot
 
         $ sudo salt 'janika' cmd.run 'ls -l'
 
@@ -160,14 +160,34 @@ Valitsin tarkempaan tarkasteluun muutamat tiedot
 
 Tähän tehtävään kului aikaa n. 10 minuuttia.
 
-## F) Hello IaC // Tämä tehtävä puuttuu
+## F) Hello IaC // klo 13.20
+
+Asensin micro-editorin master-koneelle ja asetin sen oletuseditoriksi
+
+        $ sudo apt-get -y install micro
+        $ export EDITOR=micro
+        
+Loin uuden moduulin, jolle annoin nimen 'moimoi' ja siirryin kyseiseen hakemistoon
+
+        $ sudo mkdir -p /srv/salt/moimoi/
+        cd /srv/salt/moimoi/
+
+Siirryttyäni hakemistoon suoritin komennon, joka avaa tekstieditorin. Lisäsin tiedostoon idempotenttiä koodia
+
+        $ sudoedit init.sls
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/04ebe5e3-094f-493c-b79c-962430304cd6)
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/87477c92-cbae-4140-aefd-db0c5e6456b2)
+Tämä ei jostain syystä toimi. // Klo 13.30
 
 ### Lähdeluettelo
 
 Karvinen, T. H2 - Soitto kotiin. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/
 Luettu: 08.04.2024.
 
-Karvinen, T. Two Machine Virtual Network With Deabian 11 Bullseye and Vagrant. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/
+Karvinen, T. 04.11.2021. Two Machine Virtual Network With Deabian 11 Bullseye and Vagrant. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2021/two-machine-virtual-network-with-debian-11-bullseye-and-vagrant/
 Luettu: 08.04.2024.
 
 Karvinen, T. 28.03.2018. Salt Quickstart - Salt Stack Master and Slave on Ubuntu Linux. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2018/salt-quickstart-salt-stack-master-and-slave-on-ubuntu-linux/?fromSearch=salt%20quickstart%20salt%20stack%20master%20and%20slave%20on%20ubuntu%20linux
