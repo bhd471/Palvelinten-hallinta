@@ -8,16 +8,13 @@ X) Tiivistelmä
 - Voidaan asentaa komennoilla ```sudo apt-get update``` ja ```sudo apt-get install vagrant virtualbox```
 - Voimme hallita Vagrantin avulla myös kahta virtuaalikonetta
 
-## A) Aloitin tehtävän suorittamisen klo 11.00
+## A) Kaksi virtuaalikonetta samassa verkossa // klo 11.00
 
-Avasin Powershellin ylläpitäjänä, ja siirryin kotihakemistooni komennolla:
+Avasin Powershellin ylläpitäjänä, siirryin kotihakemistooni, loin uuden hakemiston "palvelintenhallinta" ja kansioon hakemiston "twohost"
+
 
         $ cd C:\Users\janik
-Loin uuden hakemiston "palvelintenhallinta" ja kansioon hakemiston "twohost"
-
-        mkdir C:\Users\janik\palvelintenhallinta\twohost
-
-
+        $ mkdir C:\Users\janik\palvelintenhallinta\twohost
 
         
 Loin uuden Vagrant-projektin Linux Debian käyttöjärjestelmällä
@@ -31,20 +28,21 @@ Avasin tekstieditorin ja liitin sinne konfiguraatiokoodin
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/e13eb339-1af9-468e-aebb-73c88c33d2d3)
 
-Luon ja käynnistän virtuaalikoneet
+Loin ja käynnistin virtuaalikoneet
 
         $ vagrant up
 
 ![näkymä Virtualboxissa](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/ce7cf57c-f8c0-4ab8-8db8-7c31d93ac878)
 
-Testaan kirjautumista molemmille koneille SSH avulla
+Testasin kirjautumista molemmille koneille SSH avulla
 
         $ vagrant ssh t001
         $ exit
         
         $ vagrant ssh t002
         $ exit
-Onnistuu!
+
+Onnistui!
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/0457005f-5ae7-4506-88d3-ad5233f77665)
 
@@ -100,7 +98,7 @@ Toimii!
 
  Tähän tehtävään kului aikaa n. 30 minuuttia.
 
-## C) Shell-komento slavella klo 12.15
+## C) Shell-komento slavella // klo 12.15
 
 Suoritin masterilla komennon
 
