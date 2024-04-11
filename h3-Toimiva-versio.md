@@ -2,6 +2,27 @@
 
 ## X) Tiivistelmä
 
+### Chacon and Straub 2014 [Pro Git, 2nd Ed](https://git-scm.com/book/en/v2)[1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
+
+- Git näkee datan "snapshotteina" eli tilannekuvina
+- Git tarvitsee lähestulkoon ainoastaan paikallisia tiedostoja toimiakseen
+- Projektin historian tutkiminen on nopeaa, sillä Git voi lukea sen suoraan tietokannasta
+- Git mahdollistaa uusien juttujen kokeilemisen, sillä tietojen kadottaminen on erittäin haastavaa
+  
+
+### git add . && git commit; git pull && git push
+
+- Git add - tärkeä komento, joka lisää hakemistoon uusia tiedostoja valmisteltavaksi committia varten (Github 2020)
+- Git commit - tämä komento varmistaa, että projektin sen hetkinen tila tallennetaan (Atlassian)
+- Git pull - komennolla noudetaan committeja, ja päivitetään etäversiosta tietoa paikalliselle versiolle (FreeCodeCamp 2020)
+- Git push - komennon avulla pusketaan muutokset etärepositorioon (Atlassian) 
+
+### Tero Karvisen suolax-repositorion loki ja muutokset
+
+- Repositorioon on tehty kahdeksan committia
+- README-fileen on lisäilty tekstiä, sieltä on myös poistettu tekstiä ja lisätty käyttöohjeita
+- Make-komennolla voidaan suorittaa Salt-tiloja
+(Karvinen 2024)
 ## A) Online // klo 18.10
 
 Aloitin tehtävän siirtymällä https://github.com/ -verkkosivulle. Lähdin luomaan uutta repositiota, jolle annoin nimen Hello-summer. Kuvaukseen kirjoitin myös tekstin Hello summer. Valitsin public-asetuksen, lisäsin README.filen täpällä, ja valitsin lisenssiksi GNU General Public License v3.0.
@@ -112,3 +133,16 @@ Karvinen, T. 2024. H3 - Toimiva versio. Tero Karvisen verkkosivut. Luettavissa: 
 
 Stopak, J. 08.04.2020. Initial Commit. What is An Initial Commit In Git? Luettavissa: https://initialcommit.com/blog/What-Is-An-Initial-Commit-In-Git 
 Luettu: 11.04.2024.
+
+Github. 2020. Git Guides. Git add. Luettavissa: https://github.com/git-guides/git-add
+Luettu 11.04.2024.
+
+Atlassian. Git commit. Luettavissa: https://www.atlassian.com/git/tutorials/saving-changes/git-commit
+Luettu: 11.04.2024.
+
+FreeCodeCamp. 27.01.2020. Git Pull Explained. Luettavissa: https://www.freecodecamp.org/news/git-pull-explained/
+Luettu: 11.04.2024. 
+
+Atlassian. Git push. Luettavissa: https://www.atlassian.com/git/tutorials/syncing/git-push
+Luettu: 11.04.2024.
+
