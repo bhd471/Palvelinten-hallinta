@@ -69,8 +69,29 @@ Peruutin muutokset
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/42a8fe82-9424-4504-afc3-d2c34780dbf9)
 
+Tarkistin myös, että muutokset poistuivat README-tiedostosta.
 
-## D) Tukki
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/d4c8bd45-6a83-4944-91ba-52f483f21ee1)
+
+Tähän tehtävään kului aikaa n. 8 minuuttia.
+
+## D) Tukki // klo 18.45
+
+Lähdin tarkastelemaan repositorioni loki-tiedostoja
+
+    $ git log
+
+Lokissa näkyy kaksi committia. Toinen on lisäykseni README-tiedostoon. Alempi commit liittyy projektin luomiseen. Sen viesti on "Initial commit", ja tämä on ensimmänen commit jokaisessa projektissa (Stopak 2020). 
+
+Lokitiedostoissa näkyy myös, että Git on osannut arvata oikein nimeni sekä sähköpostiosoitteeni. 
+Jos kuitenkin haluaisin muuttaa niitä, se onnistuisi seuraavilla komennoilla:
+
+    $ git config --global user.name "Haluamasi Nimi"
+    $ git config --global user.email "haluamasi.sposti@outlook.com"
+    
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/27b8d288-9ff8-47e9-9a64-475548dac354)
+
+Tähän tehtävään kului aikaa n. 10 minuuttia
 
 ## E) Suolattu rakki
 
@@ -88,3 +109,6 @@ Oman koneen speksit:
 ### Lähdeluettelo
 
 Karvinen, T. 2024. H3 - Toimiva versio. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/ Luettu: 11.04.2024.
+
+Stopak, J. 08.04.2020. Initial Commit. What is An Initial Commit In Git? Luettavissa: https://initialcommit.com/blog/What-Is-An-Initial-Commit-In-Git 
+Luettu: 11.04.2024.
