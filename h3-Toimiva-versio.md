@@ -115,7 +115,9 @@ Jos kuitenkin haluaisin muuttaa niitä, se onnistuisi seuraavilla komennoilla:
 
 Tähän tehtävään kului aikaa n. 10 minuuttia
 
-## E) Suolattu rakki
+## E) Suolattu rakki // 20.12
+
+
 
 ### Oma käyttöympäristö
 
