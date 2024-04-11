@@ -2,7 +2,7 @@
 
 ## X) Tiivistelmä
 
-### Chacon and Straub 2014 [Pro Git, 2nd Ed](https://git-scm.com/book/en/v2)[1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
+### Chacon and Straub 2014 [Pro Git, 2nd Ed](https://git-scm.com/book/en/v2) [1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
 
 - Git näkee datan "snapshotteina" eli tilannekuvina
 - Git tarvitsee lähestulkoon ainoastaan paikallisia tiedostoja toimiakseen
