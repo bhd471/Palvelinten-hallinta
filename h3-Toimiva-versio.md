@@ -39,6 +39,8 @@ Tämä avasi Vim-editorin, johon lisäsin lyhyen viestin, joka kertoo mitä muut
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a3aabdc9-b3ef-46f2-8e8a-a45806654607)
 
+Lopputulos: 
+
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/1692a492-decb-483c-b504-72aef173c7b7)
 
 
