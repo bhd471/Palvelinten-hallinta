@@ -47,7 +47,28 @@ Lopputulos:
 
 Tähän tehtävään kului aikaa n. 10 minuuttia
 
-## C) Doh!
+## C) Doh! // Klo 18.36
+
+Avasin README-tiedoston notepadissa tehdäkseni "tyhmän" muutoksen
+
+    $ notepad README.md
+
+Lisäsin tiedostoon satunnaisia kirjaimia ja erikoismerkkejä, tallensin tiedoston
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6dcd7dfa-c583-4eda-ba08-76e6b394308c)
+
+Tarkistin muutokset 
+
+    $ git status
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/7ac45bb9-a802-4e85-8d8f-8ff008cfdf7e)
+
+Peruutin muutokset 
+
+    $ git reset --hard
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/42a8fe82-9424-4504-afc3-d2c34780dbf9)
+
 
 ## D) Tukki
 
