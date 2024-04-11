@@ -1,5 +1,6 @@
 # H3 - Toimiva versio
 
+Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubiin, kloonasin sen koneelleni, tein muutoksia README-tiedostoon ja puskin ne näkymään web-sivulle. Tein "tyhmän" muutoksen README-tiedostoon, jonka jälkeen tuhosin muutokset komennolla ```git reset --hard```. Tutkin gitin lokitiedostoja komennolla ```git log``` ja analysoin niitä.
 ## X) Tiivistelmä
 
 ### Chacon and Straub 2014: [Pro Git, 2nd Ed:](https://git-scm.com/book/en/v2) [1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
