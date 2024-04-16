@@ -115,10 +115,46 @@ Jos kuitenkin haluaisin muuttaa niitä, se onnistuisi seuraavilla komennoilla:
 
 Tähän tehtävään kului aikaa n. 10 minuuttia
 
-## E) Suolattu rakki // 20.12
+## E) Suolattu rakki // 16.04. Klo 13.40
+
+    mkdir /palvelintenhallinta/gittia
+    cd /palvelintenhallinta/gittia
+    git clone git@github.com:bhd471/kuukkeli.git
+
+    mkdir -p /srv/salt/cowsay/
+    cd /srv/salt/cowsay/
+    notepad install_cowsay.sls
+
+Tallensin ja suljin tiedoston. 
 
 
 
+Siirryin takaisin hakemistoon, jossa repositorio sijaitsee
+
+    cd /palvelintenhallinta/gittia
+
+klo 14.00
+
+
+Loin uuden hakemiston ja siirryin sinne
+
+    $ mkdir vagrantti
+    $ cd vagrantti
+
+klo 14.15
+
+Loin uuden hakemiston ja siirryin sinne
+
+    mkdir -p /srv/salt/cowsayy/
+    cd /srv/salt/cowsayy/
+
+Loin uuden sls tiedoston ja lisäsin sinne tekstiä
+
+    notepad init.sls
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/368eab18-1812-4a0a-ac60-d51f89dd2813)
+
+Tallensin ja suljin tiedoston.
 ### Oma käyttöympäristö
 
 Oman koneen speksit:
