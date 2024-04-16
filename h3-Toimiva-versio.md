@@ -117,44 +117,40 @@ Tähän tehtävään kului aikaa n. 10 minuuttia
 
 ## E) Suolattu rakki // 16.04. Klo 13.40
 
-    mkdir /palvelintenhallinta/gittia
-    cd /palvelintenhallinta/gittia
-    git clone git@github.com:bhd471/kuukkeli.git
+15.30
 
-    mkdir -p /srv/salt/cowsay/
-    cd /srv/salt/cowsay/
-    notepad install_cowsay.sls
+Aloitin tehtävän kirjautumalla sisään jo olemassaolevalle herra-orja-arkkitehtuurin omaaville virtuaalikoneille
 
-Tallensin ja suljin tiedoston. 
+    $ vagrant up
+    $ vagrant ssh t001 / master
+
+Loin uuden Salt-hakemiston ja siirryin sinne
+
+    $ mkdir -p /srv/salt
+    $ cd /srv/salt/
+
+Loin uuden top.sls tiedoston johon kirjoitin konfiguraation
+
+    $ sudoedit top.sls
+
+Tallensin sen, ja loin uuden hakemiston, siirryin sinne ja loin uuden init.sls tiedoston
+
+    $ mkdir hello
+    $ micro init.sls
+    
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/21f3eaae-691f-4e60-b060-e483cdc006dd)
+
+Hakemistossa näyttää tältä
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5ae3fbb8-3ae1-4718-b108-6016d84c59a2)
 
 
+Yritin ajaa Salt-tilaa, siinä onnistumatta
 
-Siirryin takaisin hakemistoon, jossa repositorio sijaitsee
+    $ sudo salt-call --local --file-root=/srv/salt state.apply
+    
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6c0b7eb1-8aab-4c68-bc25-b583953410cf)
 
-    cd /palvelintenhallinta/gittia
-
-klo 14.00
-
-
-Loin uuden hakemiston ja siirryin sinne
-
-    $ mkdir vagrantti
-    $ cd vagrantti
-
-klo 14.15
-
-Loin uuden hakemiston ja siirryin sinne
-
-    mkdir -p /srv/salt/cowsayy/
-    cd /srv/salt/cowsayy/
-
-Loin uuden sls tiedoston ja lisäsin sinne tekstiä
-
-    notepad init.sls
-
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/368eab18-1812-4a0a-ac60-d51f89dd2813)
-
-Tallensin ja suljin tiedoston.
 ### Oma käyttöympäristö
 
 Oman koneen speksit:
