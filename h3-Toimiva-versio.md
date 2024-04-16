@@ -1,6 +1,6 @@
 # H3 - Toimiva versio
 
-Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubiin, kloonasin sen koneelleni, tein muutoksia README-tiedostoon ja puskin ne näkymään web-sivulle. Tein "tyhmän" muutoksen README-tiedostoon, jonka jälkeen tuhosin muutokset komennolla ```git reset --hard```. Tutkin gitin lokitiedostoja komennolla ```git log``` ja analysoin niitä. Yritin myös ajaa omia Salt-komentojani virtuaalikoneella. Suoritin tehtävää 12.04. klo 18.10-19.00 sekä 16.04. klo 13.40-16.20. Tähän ei sisältynyt tiivistelmien tekeminen. 
+Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubiin, kloonasin sen koneelleni, tein muutoksia README-tiedostoon ja puskin ne näkymään web-sivulle. Tein "tyhmän" muutoksen README-tiedostoon, jonka jälkeen tuhosin muutokset komennolla ```git reset --hard```. Tutkin gitin lokitiedostoja komennolla ```git log``` ja analysoin niitä. Yritin myös ajaa omia Salt-komentojani virtuaalikoneella. Suoritin tehtävää 11.04. klo 18.10-19.00 sekä 16.04. klo 13.40-16.20. Tähän ei sisältynyt tiivistelmien tekeminen. 
 
 ## X) Tiivistelmä
 
@@ -33,7 +33,7 @@ Aloitin tehtävän siirtymällä https://github.com/ -verkkosivulle. Lähdin luo
 
 Tähän tehtävään kului aikaa n. 3 minuuttia.
 
-## B) Dolly // Klo 18.16
+## B) Dolly // 11.04. Klo 18.16
 
 Siirryin juuri luomassani repositoriossa kohtaa Code, josta valitsin kohdan SSH. Kopioin linkin. Avasin Powershellin ylläpitäjän oikeuksin, ja loin hakemiston "summertime". Siirryin hakemistoon.
 
