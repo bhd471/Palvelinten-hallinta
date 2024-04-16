@@ -1,6 +1,7 @@
 # H3 - Toimiva versio
 
-Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubiin, kloonasin sen koneelleni, tein muutoksia README-tiedostoon ja puskin ne näkymään web-sivulle. Tein "tyhmän" muutoksen README-tiedostoon, jonka jälkeen tuhosin muutokset komennolla ```git reset --hard```. Tutkin gitin lokitiedostoja komennolla ```git log``` ja analysoin niitä.
+Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubiin, kloonasin sen koneelleni, tein muutoksia README-tiedostoon ja puskin ne näkymään web-sivulle. Tein "tyhmän" muutoksen README-tiedostoon, jonka jälkeen tuhosin muutokset komennolla ```git reset --hard```. Tutkin gitin lokitiedostoja komennolla ```git log``` ja analysoin niitä. Yritin myös ajaa omia Salt-komentojani virtuaalikoneella. Suoritin tehtävää 12.04. klo 18.10-19.00 sekä 16.04. klo 13.40-16.20. Tähän ei sisältynyt tiivistelmien tekeminen. 
+
 ## X) Tiivistelmä
 
 ### Chacon and Straub 2014: [Pro Git, 2nd Ed:](https://git-scm.com/book/en/v2) [1.3 Getting Started - What is Git?](https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F)
@@ -24,7 +25,7 @@ Tämän viikon kotitehtävissä (Karvinen 2024) loin uuden repositorion Githubii
 - README-fileen on lisäilty tekstiä, sieltä on myös poistettu tekstiä ja lisätty käyttöohjeita
 - Make-komennolla voidaan suorittaa Salt-tiloja
 (Karvinen 2024)
-## A) Online // klo 18.10
+## A) Online // 12. 04. klo 18.10
 
 Aloitin tehtävän siirtymällä https://github.com/ -verkkosivulle. Lähdin luomaan uutta repositiota, jolle annoin nimen Hello-summer. Kuvaukseen kirjoitin myös tekstin Hello summer. Valitsin public-asetuksen, lisäsin README.filen täpällä, ja valitsin lisenssiksi GNU General Public License v3.0.
 
@@ -117,7 +118,7 @@ Tähän tehtävään kului aikaa n. 10 minuuttia
 
 ## E) Suolattu rakki // 16.04. Klo 13.40
 
-15.30
+Tehtävänanto jäi minulle hieman epäselväksi. Yritin kuitenkin parhaani mukaan ratkaista tehtävää.
 
 Aloitin tehtävän kirjautumalla sisään jo olemassaolevalle herra-orja-arkkitehtuurin omaaville virtuaalikoneille
 
@@ -133,12 +134,16 @@ Loin uuden top.sls tiedoston johon kirjoitin konfiguraation
 
     $ sudoedit top.sls
 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/118bea02-2863-4338-b5c1-24d2401ea717)
+
+
 Tallensin sen, ja loin uuden hakemiston, siirryin sinne ja loin uuden init.sls tiedoston
 
     $ mkdir hello
     $ micro init.sls
-    
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/21f3eaae-691f-4e60-b060-e483cdc006dd)
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/7d10d681-5206-4e04-9c43-1c6cce1575d1)
+
 
 Hakemistossa näyttää tältä
 
@@ -150,6 +155,8 @@ Yritin ajaa Salt-tilaa, siinä onnistumatta
     $ sudo salt-call --local --file-root=/srv/salt state.apply
     
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6c0b7eb1-8aab-4c68-bc25-b583953410cf)
+
+En saanut tätä mitenkään päin toimimaan, ja aikaa kului tämän tehtäväosion suorittamiseen rehellisesti noin kolme tuntia.
 
 ### Oma käyttöympäristö
 
