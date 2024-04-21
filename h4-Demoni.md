@@ -27,6 +27,8 @@
 - Suorita tila orjalla
 - Testaa komennolla ```nc -vz tero.example.com```
 
+
+
 ## A) Hello SLS!
 
 ## B) Top
