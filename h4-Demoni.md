@@ -20,6 +20,13 @@
 - YAML jaetaan lohkoihin
 - Teksti täytyy sisentää
 
+## [Pkg-File-Service - Control Daemons With Salt - Change SSH Server Port](https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh)
+
+- Palvelinten hallintaa Saltilla
+- Luodaan uusi SSH tila
+- Suorita tila orjalla
+- Testaa komennolla ```nc -vz tero.example.com```
+
 ## A) Hello SLS!
 
 ## B) Top
