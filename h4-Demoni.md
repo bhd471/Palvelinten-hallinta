@@ -2,8 +2,7 @@
 
 ## Tiivistelmä
 
-## [Salt Vagrant - Automatically provision one master and two slaves]
-(https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file)
+## [Salt Vagrant - Automatically provision one master and two slaves](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file)
 
 - Luodaan init.sls tiedosto ja muokataan sitä
 - Huomaa, että sisentämisessä ei käytetä tabia vaan kahta välilyöntiä
