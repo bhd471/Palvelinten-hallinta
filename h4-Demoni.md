@@ -130,7 +130,7 @@ Sivulla oli näkyvissä Apachen testisivu. Lähdin korvaamaaan testisivua
 
         $ echo "Kissa" | sudo tee /var/www/html/index.html
     
-
+Lopetettu tehtävä klo 20.50.
     
 ## D) SSHouto
 
