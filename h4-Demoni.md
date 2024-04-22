@@ -112,8 +112,26 @@ Onnistui! Hakemistojen nimet ja init.sls -tiedostojen sisältö ei täsmännyt, 
 
 Tähän tehtävään kului aikaa n. 20 minuuttia.
 
-## C) Apache easy mode
+## C) Apache easy mode // Klo 20.35
 
+Lähdin asentamaan Apachea komennolla
+
+        $ sudo apt-get -y install apache2
+
+Asensin tässä välissä curlin
+
+        $ sudo apt-get -y install curl 
+
+Testasin mitä näkyy localhost-sivulla
+
+        $ curl localhost
+
+Sivulla oli näkyvissä Apachen testisivu. Lähdin korvaamaaan testisivua
+
+        $ echo "Kissa" | sudo tee /var/www/html/index.html
+    
+
+    
 ## D) SSHouto
 
 
