@@ -73,7 +73,44 @@ Siirryin takaisin hakemistoon /srv/salt ja loin sinne top.sls-tiedoston
     $ cd ..
     $ sudoedit top.sls
 
+Kirjoitin tekstitiedostoon ajettavat tilat 
 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/73be53cb-39f7-4b04-8ee0-fc0272cc0d66)
+
+Tämän jälkeen yritin ajaa tiloja 
+
+        $ sudo salt-call --local state.apply
+
+Sain kuitenkin vastaukseksi virheilmoituksen 
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/e8705bd5-5937-4273-ae28-d21a31d446ff)
+
+Päätin luoda uuden kansion ja uuden init.sls-tiedoston
+
+        $ sudo mkdir helloworld
+        $ sudoedit init.sls
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/9a804e5e-2fe7-4c38-8078-e6c506a59aa2)
+
+Loin myös toisen uuden kansion
+
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/bceece3c-2fd7-4436-b7b8-c3e48e0632a2)
+
+Siirryin takaisin /srv/salt -kansioon muokkaamaan top.sls -tiedostoa
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/633c198f-3ccc-4e51-8464-c2b46285c31f)
+
+Kokeilin ajaa komentoja uudelleen 
+
+        $ sudo salt-call --local state.apply
+
+Onnistui! Hakemistojen nimet ja init.sls -tiedostojen sisältö ei täsmännyt, joten tiloja ei voitu ajaa
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/995fc100-aa27-45f2-8d43-ac8cd5ea190e)
+
+Tähän tehtävään kului aikaa n. 20 minuuttia.
 
 ## C) Apache easy mode
 
