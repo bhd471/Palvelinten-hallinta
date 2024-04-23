@@ -174,7 +174,27 @@ Tekstini näkyi sivulla oikein. Lähdin automatisoimaan äskeistä. Loin uuden k
         $ sudo mkdir -p /srv/salt/apache2
         $ cd /srv/salt/apache2
 
-    
+Loin kansioon init.sls-tiedoston, johon kirjoitin Salt-tiloja
+
+        $ nano init.sls
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/b41a2db8-a57c-4c11-9b68-729b80c31a39)
+
+
+Loin uuden index.html tiedoston /srv/salt/apache2 hakemistoon, kirjoitin sinne Mau
+
+        $ nano index.html
+
+Yritin ajaa Salt-tiloja
+
+        $ sudo salt '*' state.apply apache2
+
+Jostain syystä Salt ei löytänyt index.html-tiedostoa.
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/581c3f18-13ca-46cb-a8d9-12bfa2a6f637)
+
+Tarkistelin Salt-masterin lokitiedostoja, ja löysin sieltä useita virheilmoituksia liittyen verkkoasetuksiin, mutta en tiedä liittyykö tämä suoranaisesti ongelmaani. 
+
 Lopetettu tehtävä klo 20.50.
 
 Jatkoin tehtävää 23.4. klo 14.15
@@ -182,4 +202,6 @@ Jatkoin tehtävää 23.4. klo 14.15
 
 ## D) SSHouto
 
+### Lähdeluettelo
 
+Ninotronix. 22.04.2023. How to install apache2 using salt stack. Luettavissa: https://ninotronix.com/devopsnewblogs/index.php/2023/04/22/how-to-install-apache2-using-salt-stack/
