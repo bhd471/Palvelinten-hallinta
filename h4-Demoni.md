@@ -1,5 +1,7 @@
 # H4 - Demoni
 
+
+
 ## Tiivistelmä
 
 ## [Salt Vagrant - Automatically provision one master and two slaves](https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file)
@@ -29,9 +31,7 @@
 
 
 
-## A) Hello SLS!
-
-22.04. klo 20.00
+## A) Hello SLS! // 22.04. klo 20.00
 
 Aloitin kirjautumalla sisään salt masterille
 
@@ -112,18 +112,15 @@ Onnistui! Hakemistojen nimet ja init.sls -tiedostojen sisältö ei täsmännyt, 
 
 Tähän tehtävään kului aikaa n. 20 minuuttia.
 
-## C) Apache easy mode // Klo 20.35
+## C) Apache easy mode // Klo 20.35-20.50 & Jatkettu 23.04. klo 14.15-16.00
 
 Lähdin asentamaan Apachea komennolla
 
         $ sudo apt-get -y install apache2
 
-Asensin tässä välissä curlin
+Asensin tässä välissä curlin, jolla testasin mitä näkyy localhost-sivulla
 
         $ sudo apt-get -y install curl 
-
-Testasin mitä näkyy localhost-sivulla
-
         $ curl localhost
 
 Sivulla oli näkyvissä Apachen testisivu. Lähdin korvaamaaan testisivua
@@ -174,7 +171,7 @@ Tekstini näkyi sivulla oikein. Lähdin automatisoimaan äskeistä. Loin uuden k
         $ sudo mkdir -p /srv/salt/apache2
         $ cd /srv/salt/apache2
 
-Loin kansioon init.sls-tiedoston, johon kirjoitin Salt-tiloja
+Loin kansioon init.sls-tiedoston, johon kirjoitin Salt-tiloja (Karvinen 2018)
 
         $ nano init.sls
 
@@ -193,15 +190,62 @@ Jostain syystä Salt ei löytänyt index.html-tiedostoa.
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/581c3f18-13ca-46cb-a8d9-12bfa2a6f637)
 
-Tarkistelin Salt-masterin lokitiedostoja, ja löysin sieltä useita virheilmoituksia liittyen verkkoasetuksiin, mutta en tiedä liittyykö tämä suoranaisesti ongelmaani. 
+Tarkistelin Salt-masterin lokitiedostoja, ja löysin sieltä useita virheilmoituksia liittyen verkkoasetuksiin, mutta en tiedä liittyykö tämä suoranaisesti ongelmaani. Luultavasti olen kirjoittanut Salt-tilat jotenkin väärin, tai tiedostot sijaitsevat väärässä paikassa. En osannut ratkaista ongelmaa.
 
-Lopetettu tehtävä klo 20.50.
-
-Jatkoin tehtävää 23.4. klo 14.15
+Tähän tehtävään kului aikaa n. 2 tuntia.
 
 
-## D) SSHouto
+## D) SSHouto // Klo 16.25
+
+Siirryin Salt-hakemistoon ja loin uuden sshd.sls-tiedoston
+
+        $ cd /srv/salt
+        $ sudoedit sshd.sls
+
+Lisäsin Salt-tiloja tekstitiedostoon
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/54a63b70-7b81-4e5f-a400-3b3b1dc94ecf)
+
+Kopioin sshd_config-tiedoston Salt-hakemistoon
+
+        $ sudo cp /etc/ssh/sshd_config /srv/salt
+
+Poistin # -merkin tekstin 'Port 22' edestä ja lisäsin uuden portin 2222
+
+        $ sudoedit /srv/salt/sshd_config
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/7db9a8be-c7d5-43c7-8fd7-9baa2d7b1fbd)
+
+Ajoin Salt-tilan
+
+        $ sudo salt-call --local state.apply sshd
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5b15ca69-4fea-4e4e-96c4-27f45c8797de)
+
+Tähän tehtävään kului aikaa n. 20 minuuttia. 
+
+### Oma käyttöympäristö
+
+Oman koneen speksit:
+
+- Acer Nitro N50-620 työasema
+- Windows 11 käyttöjärjestelmä
+- Intel Core i5-prosessori
+- NVIDIA GeForce RTX 3060 Ti-näytönohjain
+- 16 Gt RAM-muistia
+- 1 TB tallennustilaa
+
 
 ### Lähdeluettelo
 
-Ninotronix. 22.04.2023. How to install apache2 using salt stack. Luettavissa: https://ninotronix.com/devopsnewblogs/index.php/2023/04/22/how-to-install-apache2-using-salt-stack/
+Karvinen, T. H4 - Demoni. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2024/configuration-management-2024-spring/#h4-demoni Luettu: 21.04.2024.
+
+Karvinen, T. 28.03.2023. Salt Vagrant - automatically provision one master and two slaves. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2023/salt-vagrant/#infra-as-code---your-wishes-as-a-text-file Luettu: 21.04.2024.
+
+Salt Project. Salt overview. Ohjeita Saltin käyttöön. Luettavissa: https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html#rules-of-yaml Luettu: 21.04.2024.
+
+Karvinen, T. 03.04.2018. Pkg-File-Service - Control Daemons with Salt - Change SSH Server Port. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2018/04/03/pkg-file-service-control-daemons-with-salt-change-ssh-server-port/?fromSearch=karvinen%20salt%20ssh Luettu: 21.04.2024.
+
+Ninotronix. 22.04.2023. How to install apache2 using salt stack. Luettavissa: https://ninotronix.com/devopsnewblogs/index.php/2023/04/22/how-to-install-apache2-using-salt-stack/ Luettu: 23.04.2024.
+
+Karvinen, T. 03.04.2018. Apache User Homepages Automatically - Salt Package-File-Service Example. Tero Karvisen verkkosivut. Luettavissa: https://terokarvinen.com/2018/apache-user-homepages-automatically-salt-package-file-service-example/ Luettu: 23.04.2024.
