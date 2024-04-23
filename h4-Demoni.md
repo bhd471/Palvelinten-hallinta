@@ -129,9 +129,57 @@ Testasin mitä näkyy localhost-sivulla
 Sivulla oli näkyvissä Apachen testisivu. Lähdin korvaamaaan testisivua
 
         $ echo "Kissa" | sudo tee /var/www/html/index.html
+
+Loin uuden kansion ja loin uuden nano-tekstitiedoston, johon täytin Virtual Host-tiedot
+
+        $ sudo mkdir webbi
+        $ sudoedit /etc/apache2/sites-available/janiikki.com.conf
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/930cb7bc-5ddf-4ca9-922b-cefd27ecd1ae)
+
+Käynnistin Apachen uudelleen ja siirryin sites-available hakemistoon
+
+        $ sudo systemctl restart apache2
+        $ cd /etc/apache2/sites-available/
+
+Suljin default-sivun ja otin luomani sivun käyttöön
+
+        $ sudo a2dissite 000-default.conf
+        $ sudo a2ensite janiikki.com.conf 
+
+
+Käynnistin Apachen uudelleen
+
+        $ sudo systemctl restart apache2
+
+Siirryin webbi-kansioon ja yritin luoda index.html tiedostoa siinä onnistumatta
+
+        $ cd webbi
+        $ nano index.html
+
+Koska html-sivuja ei tulisi muokata sudolla, muokkasin hakemiston käyttöoikeuksia
+
+        $ sudo chmow o+w /home/vagrant/webbi/
+
+Lisäsin index.html tiedostoon tekstiä ja käynnistin apachen uudelleen
+
+        $ sudo systemctl restart apache2
+
+Kokeilin curlilla miltä sivulla näyttää
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/15646622-f279-444f-82cc-c3947c9895d9)
+
+Tekstini näkyi sivulla oikein. Lähdin automatisoimaan äskeistä. Loin uuden kansion Salt-hakemistoon ja siirryin sinne
+
+        $ sudo mkdir -p /srv/salt/apache2
+        $ cd /srv/salt/apache2
+
     
 Lopetettu tehtävä klo 20.50.
-    
+
+Jatkoin tehtävää 23.4. klo 14.15
+
+
 ## D) SSHouto
 
 
