@@ -149,14 +149,11 @@ Käynnistin Apachen uudelleen
 
         $ sudo systemctl restart apache2
 
-Siirryin webbi-kansioon ja yritin luoda index.html tiedostoa siinä onnistumatta
+Siirryin webbi-kansioon ja loin index.html tiedoston
 
         $ cd webbi
         $ nano index.html
 
-Koska html-sivuja ei tulisi muokata sudolla, muokkasin hakemiston käyttöoikeuksia
-
-        $ sudo chmow o+w /home/vagrant/webbi/
 
 Lisäsin index.html tiedostoon tekstiä ja käynnistin apachen uudelleen
 
