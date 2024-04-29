@@ -22,11 +22,11 @@ Valitsin listasta muutaman kohdan joita halusin analysoida
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/07f18d2d-bc50-4f3d-b3c5-e790ff9c91fa)
 
-cpu_model kertoo koneen prosessorin mallin, tässä tapauksessa Intel Core i3-8145U. 
+- cpu_model kertoo koneen prosessorin mallin, tässä tapauksessa Intel Core i3-8145U. 
 
-efi-secure-boot false - tarkoittaa, että toiminto ei ole käytössä koneella. Secure boot -toiminto varmistaa, että kone ei käynnistä tuntemattomia ohjelmia, jotka saattavat olla haitallisia (Microsoft 2023).
+- efi-secure-boot false - tarkoittaa, että toiminto ei ole käytössä koneella. Secure boot -toiminto varmistaa, että kone ei käynnistä tuntemattomia ohjelmia, jotka saattavat olla haitallisia (Microsoft 2023).
 
-id kertoo koneen nimen. Tässä tapauksessa nimi on LAPTOP-4215EMRG. 
+- id kertoo koneen nimen. Tässä tapauksessa nimi on LAPTOP-4215EMRG. 
 
 Tähän tehtävään kului aikaa n. 10 minuuttia.
 
@@ -43,10 +43,20 @@ Onnistui!
 
 Tähän tehtävään kului aikaa n. 5 minuuttia.
 
-## D) CSI Kerava 
+## D) CSI Kerava // Klo 18.40
+
+Tämä tehtävä jäi hieman epäselväksi, mutta yritin tutkia asiaa netistä (ChatGPT & Microsoft). Päädyin suorittamaan alla olevan komennon, joka tulosti polun \Windows\system32\drivers\etc\ sisällön. 
+
+        $ Get-ChildItem -Path C:\Windows\System32\drivers\etc\ -File |             Sort-Object | Select-Object -First 10
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/8c0311a6-8a02-4a4f-b313-5a20747b9698)
+
 
 ## E) Komennus
 
 ### Lähteet
 
 Microsoft. 08.02.2023. Secure boot. Luettavissa: https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/oem-secure-boot. Luettu: 29.04.2024.
+
+Microsoft. Get-ChildItem. Luettavissa: https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-childitem?view=powershell-7.4. Luettu: 29.04.2024.
