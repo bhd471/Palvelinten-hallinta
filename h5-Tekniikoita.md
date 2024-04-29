@@ -32,7 +32,20 @@ Tähän tehtävään kului aikaa n. 10 minuuttia.
 
 ## C) File-toiminto // Klo 15.10
 
+Kokeilin luoda uuden tiedoston file-komennolla
 
+        $ salt-call --local -l info state.single file.managed                         /Windows/temp/moijanika
+        
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/74bc7de0-062a-4fcf-99eb-57c9f4a2400e)
+
+Onnistui!
+
+Tähän tehtävään kului aikaa n. 5 minuuttia.
+
+## D) CSI Kerava 
+
+## E) Komennus
 
 ### Lähteet
 
