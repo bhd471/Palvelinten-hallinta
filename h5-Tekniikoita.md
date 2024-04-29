@@ -2,7 +2,7 @@
 
 ## Tiivistelmä
 
-Tämän viikon kotitehtävissä (Karvinen 2024) testasin Saltin asennuksen Windowsilla, keräsin tietoa Windows-koneesta grains.items -komennolla, kokeilin Windowsilla file-toimintoa ja tarkastelin viimeksi muokattuja tiedostoja Linuxin find-komennolla. Viimeistä tehtävää, jossa tehtävänantona oli luoda Salt-tila, jolla voidaan asentaa järjestelmään uusi komento, en osannut suorittaa. Suoritin tehtävän 29.04.2024. klo 14.45-15.15 & klo 19.30-19.50.
+Tämän viikon kotitehtävissä (Karvinen 2024) testasin Saltin asennuksen Windowsilla, keräsin tietoa Windows-koneesta grains.items -komennolla, kokeilin Windowsilla file-toimintoa ja tarkastelin viimeksi muokattuja tiedostoja Linuxin find-komennolla. Viimeistä tehtävää, jossa tehtävänantona oli luoda Salt-tila, jolla voidaan asentaa järjestelmään uusi komento, en osannut suorittaa. Suoritin kohdat a, b ja c poikkeuksellisesti läppärillä. Suoritin tehtävän 29.04.2024. klo 14.45-15.15 & klo 19.30-19.50.
 
 ### [H5 - Salt Linux tehtävät, Toni Seppä](https://salthomework.wordpress.com/h5/)
 
@@ -16,7 +16,7 @@ Tämän viikon kotitehtävissä (Karvinen 2024) testasin Saltin asennuksen Windo
 
 ## A) Saltin asennuksen testaaminen // Klo 14.45
 
-Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
+Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla. 
 
 
     $ salt-call --local --version
@@ -25,7 +25,7 @@ Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla
 
 ## B) Grains.items-toiminto Saltilla // Klo 14.55
 
-Suoritin komennon, joka listaa tietoja koneesta. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
+Suoritin komennon, joka listaa tietoja koneesta.
 
     $ salt-call --local grains.items
 
@@ -45,7 +45,7 @@ Tähän tehtävään kului aikaa n. 10 minuuttia.
 
 ## C) File-toiminto // Klo 15.10
 
-Kokeilin luoda uuden tiedoston file-komennolla. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
+Kokeilin luoda uuden tiedoston file-komennolla. 
 
 
         $ salt-call --local -l info state.single file.managed                         /Windows/temp/moijanika
