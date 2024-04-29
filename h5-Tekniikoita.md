@@ -22,11 +22,11 @@ Valitsin listasta muutaman kohdan joita halusin analysoida
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/07f18d2d-bc50-4f3d-b3c5-e790ff9c91fa)
 
-- cpu_model kertoo koneen prosessorin mallin, tässä tapauksessa Intel Core i3-8145U. 
+> - cpu_model kertoo koneen prosessorin mallin, tässä tapauksessa Intel Core i3-8145U. 
 
-- efi-secure-boot false - tarkoittaa, että toiminto ei ole käytössä koneella. Secure boot -toiminto varmistaa, että kone ei käynnistä tuntemattomia ohjelmia, jotka saattavat olla haitallisia (Microsoft 2023).
+> - efi-secure-boot false - tarkoittaa, että toiminto ei ole käytössä koneella. Secure boot -toiminto varmistaa, että kone ei käynnistä tuntemattomia ohjelmia, jotka saattavat olla haitallisia (Microsoft 2023).
 
-- id kertoo koneen nimen. Tässä tapauksessa nimi on LAPTOP-4215EMRG. 
+> - id kertoo koneen nimen. Tässä tapauksessa nimi on LAPTOP-4215EMRG. 
 
 Tähän tehtävään kului aikaa n. 10 minuuttia.
 
@@ -49,11 +49,19 @@ Tämä tehtävä jäi hieman epäselväksi, mutta yritin tutkia asiaa netistä (
 
         $ Get-ChildItem -Path C:\Windows\System32\drivers\etc\ -File |             Sort-Object | Select-Object -First 10
 
+> - Get-ChildItem hakee tiedostot
+> - -Path C:\Windows\System32\drivers\etc\ kertoo haettavan polun
+> - -File rajaa haun tiedostoihin
+> - Sort-Object lajittelee tuloksen pienimmästä suurimpaan
+> - Select-Object -First 10 näyttää vain 10 ensimmäistä tulosta
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/8c0311a6-8a02-4a4f-b313-5a20747b9698)
 
+Tähän tehtävään kului aikaa n. 20 minuuttia. 
 
-## E) Komennus
+## E) Komennus // Klo 19.00
+
+
 
 ### Lähteet
 
