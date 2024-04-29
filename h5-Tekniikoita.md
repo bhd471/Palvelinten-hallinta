@@ -16,7 +16,8 @@ Tämän viikon kotitehtävissä (Karvinen 2024) testasin Saltin asennuksen Windo
 
 ## A) Saltin asennuksen testaaminen // Klo 14.45
 
-Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla
+Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
+
 
     $ salt-call --local --version
 
@@ -24,7 +25,7 @@ Windows-koneellani oli jo Salt asennettuna, joten testasin asennuksen komennolla
 
 ## B) Grains.items-toiminto Saltilla // Klo 14.55
 
-Suoritin komennon, joka listaa tietoja koneesta
+Suoritin komennon, joka listaa tietoja koneesta. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
 
     $ salt-call --local grains.items
 
@@ -44,7 +45,8 @@ Tähän tehtävään kului aikaa n. 10 minuuttia.
 
 ## C) File-toiminto // Klo 15.10
 
-Kokeilin luoda uuden tiedoston file-komennolla
+Kokeilin luoda uuden tiedoston file-komennolla. Huom. Tämä tehtävä tehty poikkeuksellisesti läppärillä
+
 
         $ salt-call --local -l info state.single file.managed                         /Windows/temp/moijanika
         
