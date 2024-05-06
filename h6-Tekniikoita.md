@@ -9,5 +9,7 @@
 - Package definition -tiedosto määrittää mm. pakettien versiot ja nimet
 - Kloonataan repositorio salt-winrepo-ng
 - Luodaan tietokanta
-- Ladataan paketteja komennolla ´´´pkg.install´´´
+- Ladataan paketteja komennolla ```pkg.install```
+- Komennolla ```pkg.list_available``` voidaan tarkastella ladattavissa olevien pakettien versioita
+- Paketteja voidaan poistaa komennolla ```pkg.remove```
 - 
