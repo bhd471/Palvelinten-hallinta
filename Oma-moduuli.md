@@ -81,8 +81,13 @@ Siirryin muokkaamaan aiemmin luomaani sls -tiedostoa, jotta saadaan tila korvaam
 
 Loin uuden hakemiston /srv/salt/janika.com. Loin tähän hakemistoon uuden HTML-tiedoston. 
 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
+
+
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2dd1c33c-351f-4038-9e17-cfce54e46140)
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5c8dd27f-da85-478d-807b-ff3cf0daaa30)
 
 ### Lähteet
 
