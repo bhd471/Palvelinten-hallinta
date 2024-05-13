@@ -68,6 +68,21 @@ Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Luon tilan, joka as
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/35df1216-9b60-4334-be6d-b86abaa7ed64)
 
+Lähdin korvaamaan testisivua. Loin uuden HTML-tiedoston, johon lisäsin tekstiä.
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5ae460fc-401c-4fb7-92bb-fe8b2e498c06)
+
+Kopioin luomani tiedoston oikeaan hakemistoon
+
+        $ sudo cp /home/vagrant/kotisivu.html /var/www/html/
+
+Siirryin muokkaamaan aiemmin luomaani sls -tiedostoa, jotta saadaan tila korvaamaan testisivu
+
+Loin uuden hakemiston /srv/salt/janika.com. Loin tähän hakemistoon uuden HTML-tiedoston. 
+
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2dd1c33c-351f-4038-9e17-cfce54e46140)
 
 ### Lähteet
 
