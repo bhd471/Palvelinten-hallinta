@@ -71,3 +71,4 @@ Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Luon tilan, joka as
 
 ### Lähteet
 
+https://www.linode.com/docs/guides/configure-apache-with-salt-stack/
