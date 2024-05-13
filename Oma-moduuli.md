@@ -83,11 +83,11 @@ Loin uuden hakemiston /srv/salt/janika.com. Loin tähän hakemistoon uuden HTML-
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
 
+Tällä hetkellä tila asentaa Apachen, käynnistää sen, poistaa oletussivun (000-default) ja HTML-tiedoston sisältö näkyy sivulla. käytöstä.
 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2324f023-f226-4275-8e2f-c32f794d2ef3)
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2dd1c33c-351f-4038-9e17-cfce54e46140)
-
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5c8dd27f-da85-478d-807b-ff3cf0daaa30)
+Seuraavaksi lähdin luomaan tilaa, joka asentaa ja konfiguroi tulimuurin.
 
 ### Lähteet
 
