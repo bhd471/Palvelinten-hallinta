@@ -68,25 +68,47 @@ Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Luon tilan, joka as
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/35df1216-9b60-4334-be6d-b86abaa7ed64)
 
-Lähdin korvaamaan testisivua. Loin uuden HTML-tiedoston, johon lisäsin tekstiä.
 
-
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5ae460fc-401c-4fb7-92bb-fe8b2e498c06)
-
-Kopioin luomani tiedoston oikeaan hakemistoon
-
-        $ sudo cp /home/vagrant/kotisivu.html /var/www/html/
-
-Siirryin muokkaamaan aiemmin luomaani sls -tiedostoa, jotta saadaan tila korvaamaan testisivu
-
-Loin uuden hakemiston /srv/salt/janika.com. Loin tähän hakemistoon uuden HTML-tiedoston. 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
 
 Tällä hetkellä tila asentaa Apachen ja käynnistää sen.
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2324f023-f226-4275-8e2f-c32f794d2ef3)
 
-Seuraavaksi lähdin luomaan tilaa, joka asentaa ja konfiguroi tulimuurin.
+
+### Curl
+
+Päätin luoda tilan curlin asennukselle.
+Loin kansion 'curl', johon loin curl.sls -tiedoston. Lisäsin tilan tiedostoon. Lisäsin top.sls -tiedostoon curlin.
+
+        curl:
+          pkg.installed
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/da352ba7-450b-48f8-86b9-27e6596ae18a)
+
+### Git
+
+Lähdin asentamaan Gittiä. Ensin manuaalisesti, sitten automatisoin asennuksen. 
+
+        $ sudo apt-get update
+        $ sudo apt-get -y install git
+        
+
+Loin uuden hakemiston /srv/salt/git, johon loin uuden git.sls -tiedoston. 
+
+        git:
+          pkg.installed
+
+Lisäsin gitin top.sls -tiedostoon. 
+
+        base:
+          'kone2':
+            - apache2.apache
+            - ufw.ufw
+            - curl.curl
+            - git.git
+
+
 
 
 ### Lähteet
