@@ -114,7 +114,7 @@ Loin kansion 'curl', johon loin curl.sls -tiedoston. Lisäsin tilan tiedostoon. 
         curl:
           pkg.installed
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/da352ba7-450b-48f8-86b9-27e6596ae18a)
+
 
 ### Git
 
@@ -132,7 +132,7 @@ Loin uuden hakemiston /srv/salt/git, johon loin uuden git.sls -tiedoston.
 Lisäsin gitin top.sls -tiedostoon. 
 
         base:
-          'kone2':
+          '*':
             - apache2.apache
             - ufw.ufw
             - curl.curl
