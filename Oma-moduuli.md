@@ -16,7 +16,7 @@ Sitten koneet käyntiin ja kirjauduttiin sisään. Kokeilin kirjautua molemmille
         $ vagrant exit
         $ vagrant ssh kone2
         
-Pingattiin koneilla toisiaan, toimii!
+Pingasin koneilla toisiaan, toimii!
 
         $ vagrant ssh kone1
         $ ping -c 192.168.88.102
@@ -39,13 +39,13 @@ Asetetaan "kone2" orjaksi.
     $ sudo apt-get update
     $ sudo apt-get -y install salt-minion
 
-Liitetään koneet yhteen lisäämällä masterin IP-osoite konfiguraatiotiedostoon ja käynnistetään orja uudelleen.
+Liitin koneet yhteen lisäämällä masterin IP-osoite konfiguraatiotiedostoon ja käynnistin orjan uudelleen.
 
         $ sudoedit /etc/salt/minion
         $ sudo systemctl restart salt-minion.service
     
 
-Hyväksytään orja-avain master koneella.
+Hyväksyin orja-avaimen master koneella.
 
         $ sudo salt-key -A
 
@@ -56,16 +56,24 @@ Asensin Apachen ja curlin ensin manuaalisesti.
     $ sudo apt-get -y install apache2
     $ sudo apt-get -y install curl
 
-Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Loin tilan, joka asentaa Apachen ja tarkistaa, että weppipalvelin on päällä.
+Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Loin tilan, joka asentaa ja käynnistää Apachen, ja korvaa testisivun.
 
+    apache2:
+      pkg.installed
 
+    apache2 Service:
+      service.running:
+        - name: apache2
+        - enable: True
+        - require:
+          - pkg: apache2
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
+    /var/www/html/index.html:
+      file.managed:
+      - source: salt://apache2/index.html
+    
 
-Tällä hetkellä tila asentaa Apachen ja käynnistää sen.
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2324f023-f226-4275-8e2f-c32f794d2ef3)
-
-### Tulimuuri
+## Tulimuuri
 
 Lähdin asentamaan tulimuuria. Ensin manuaalisesti, sitten automatisoin asennuksen.
 
@@ -92,13 +100,13 @@ Tässä kohtasin ongelmia. Onnistuin luomaan tilan, joka asentaa ja käynnistä�
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a601a386-f7f5-4c00-9081-e78310013f62)
 
-Tässä vaiheessa luovutin portina avaamisen automatisoinnin kanssa, ja avasin portin 22 manuaalisesti, jotta pystyn jatkamaan SSH-kirjautumista
+Tässä vaiheessa luovutin portina avaamisen automatisoinnin kanssa ja avasin portin 22 manuaalisesti, jotta pystyn jatkamaan SSH-kirjautumista
 
         $ sudo ufw allow 22/tcp
 
-### Curl
+## Curl
 
-Päätin luoda tilan curlin asennukselle.
+Automatisoin curlin asennuksen.
 Loin kansion 'curl', johon loin curl.sls -tiedoston. Lisäsin tilan tiedostoon. Lisäsin top.sls -tiedostoon curlin.
 
         curl:
@@ -106,7 +114,7 @@ Loin kansion 'curl', johon loin curl.sls -tiedoston. Lisäsin tilan tiedostoon. 
 
 
 
-### Git
+## Git
 
 Lähdin asentamaan Gittiä. Ensin manuaalisesti, sitten automatisoin asennuksen. 
 
@@ -119,30 +127,33 @@ Loin uuden hakemiston /srv/salt/git, johon loin uuden git.sls -tiedoston.
         git:
           pkg.installed
 
-Lisäsin gitin top.sls -tiedostoon. 
+Lisäsin Gitin top.sls -tiedostoon. 
 
-        base:
-          '*':
-            - apache2.apache
-            - ufw.ufw
-            - curl.curl
-            - git.git
 
-### Micro
+## Micro
 
 Lähdin asentamaan Micro-editoria. Ensin manuaalisesti, sitten automatisoin asennuksen. Loin uuden hakemiston /srv/salt/micro, johon loin uuden micro.sls -tiedoston. 
 
         micro:
           pkg.installed
-
+Lisäsin micron top.sls -tiedostoon. 
         
 ## Lopputulos
 
+Top.sls:
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/9c49cdc5-779a-40a9-bd33-d4434cfa0cc3)
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/03d0890e-c797-4de4-b2ed-d8c5e8f81275)
+
+Kaikki tilat ajetaan onnistuneesti
+
+        $ sudo salt 'kone2' state.apply
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/07658458-dc97-4375-83fe-2bb2aa325e03)
+
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/44c315cf-2265-4329-8d47-6e390b8a3d32)
 
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/55fd73cf-f82e-44c2-91bb-ce30ce62131e)
 
 ### Lähteet
 
