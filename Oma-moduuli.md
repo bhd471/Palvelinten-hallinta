@@ -1,66 +1,63 @@
 # Oma moduuli
 
-Aloitin luomalla uusia virtuaalikoneita Vagrantin avulla ja nimesin koneita tekemällä muutoksia Vagrantfileen.
+Tämän moduulin tarkoituksena on helpottaa ja nopeuttaa asennuksia.
+
+Lisenssi: 
+
+Aloitin luomalla kaksi uutta virtuaalikonetta Vagrantin avulla. Määritin koneet tekemällä muutoksia Vagrantfileen.
 
     $ vagrant init debian/bullseye64
     $ notepad Vagrantfile
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/55f5ad65-dfb5-4f67-b9f1-7de58489dc25)
-
-klo 15.15-
-
-Sitten koneet käyntiin ja kirjaudutaan sisään. Kokeillaan kirjautua molemmille koneille ssh avulla
+Sitten koneet käyntiin ja kirjauduttiin sisään. Kokeilin kirjautua molemmille koneille ssh avulla.
 
         $ vagrant up
         $ vagrant ssh kone1
         $ vagrant exit
         $ vagrant ssh kone2
         
-Pingataan koneilla toisiaan, toimii!
+Pingattiin koneilla toisiaan, toimii!
 
         $ vagrant ssh kone1
         $ ping -c 192.168.88.102
         $ exit
 
-        $vagrant ssh kone2
+        $ vagrant ssh kone2
         $ ping -c 1 192.168.88.101
         $ exit
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/06365af0-5754-4c5c-a3ff-08a8467460a1)
 
-Asetetaan "kone1" masteriksi
+Asetetaan "kone1" masteriksi ja tarkistetaan sen IP-osoite.
 
     $ sudo apt-get update
     $ sudo apt-get -y install salt-master
+    $ hostname -I
 
-Tarkistetaan masterin IP-osoite (10.0.2.15 192.168.88.101)
-
-        $ hostname -I
-
-Asetetaan "kone2" orjaksi
+Asetetaan "kone2" orjaksi.
 
     $ sudo apt-get update
     $ sudo apt-get -y install salt-minion
 
-Liitetään koneet yhteen lisäämällä masterin IP-osoite konfiguraatiotiedostoon ja käynnistetään orja uudelleen
+Liitetään koneet yhteen lisäämällä masterin IP-osoite konfiguraatiotiedostoon ja käynnistetään orja uudelleen.
 
         $ sudoedit /etc/salt/minion
         $ sudo systemctl restart salt-minion.service
     
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/77779403-3935-4a0d-914a-079fcb482188)
 
-Hyväksytään orja-avain master koneella
+Hyväksytään orja-avain master koneella.
 
         $ sudo salt-key -A
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/89657170-6045-45f8-826f-7f8621574d4d)
 
-Asensin Apachen ja curlin ensin manuaalisesti
+Asensin Apachen ja curlin ensin manuaalisesti.
 
     $ sudo apt-get -y install apache2
     $ sudo apt-get -y install curl
 
-Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Luon tilan, joka asentaa Apachen ja tarkistaa, että weppipalvelin on päällä.
+Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Loin tilan, joka asentaa Apachen ja tarkistaa, että weppipalvelin on päällä.
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/efddda4d-02b4-4af5-9703-c16ae4ca688a)
 
@@ -83,7 +80,7 @@ Lähdin asentamaan tulimuuria. Ensin manuaalisesti, sitten automatisoin asennuks
         $ sudo apt-get -y install ufw
 
 Loin uuden hakemiston /srv/salt/ufw, johon loin ufw.sls -tiedoston. 
-Tässä kohtaa kohtasin ongelmia. Onnistuin luomaan tilan, joka asentaa ja käynnistää tulimuurin. Yritin tämän lisäksi tehdä reikää tulimuuriin. En kuitenkaan onnistunut tässä.
+Tässä kohtasin ongelmia. Onnistuin luomaan tilan, joka asentaa ja käynnistää tulimuurin. Yritin tämän lisäksi tehdä reikää tulimuuriin. En kuitenkaan onnistunut tässä.
 
         ufw:
           pkg.installed
@@ -139,9 +136,13 @@ Lisäsin gitin top.sls -tiedostoon.
             - git.git
 
 
+## Lopputulos
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6655eb41-2a21-4858-bdf5-107dfc3b0cb9)
 
 
 ### Lähteet
 
-https://www.linode.com/docs/guides/configure-apache-with-salt-stack/
-https://docs.saltproject.io/en/latest/ref/states/all/salt.states.firewall.html
+Luettavissa: https://www.linode.com/docs/guides/configure-apache-with-salt-stack/. Luettu: 13.05.2024.
+
+Luettavissa: https://docs.saltproject.io/en/latest/ref/states/all/salt.states.firewall.html. Luettu: 13.05.2024.
