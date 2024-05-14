@@ -140,11 +140,11 @@ Lisäsin micron top.sls -tiedostoon.
         
 ## Lopputulos
 
-Top.sls:
+Top.sls -tiedoston sisältö:
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/03d0890e-c797-4de4-b2ed-d8c5e8f81275)
 
-Kaikki tilat ajetaan onnistuneesti
+Kaikki tilat ajettiin onnistuneesti:
 
         $ sudo salt 'kone2' state.apply
 
@@ -152,6 +152,8 @@ Kaikki tilat ajetaan onnistuneesti
 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/44c315cf-2265-4329-8d47-6e390b8a3d32)
+
+Tältä näyttää localhost-sivun sisältö:
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/55fd73cf-f82e-44c2-91bb-ce30ce62131e)
 
