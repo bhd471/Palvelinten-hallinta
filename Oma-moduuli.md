@@ -75,6 +75,36 @@ Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Luon tilan, joka as
 Tällä hetkellä tila asentaa Apachen ja käynnistää sen.
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2324f023-f226-4275-8e2f-c32f794d2ef3)
 
+### Tulimuuri
+
+Lähdin asentamaan tulimuuria. Ensin manuaalisesti, sitten automatisoin asennuksen.
+
+        $ sudo apt-get update
+        $ sudo apt-get -y install ufw
+
+Loin uuden hakemiston /srv/salt/ufw, johon loin ufw.sls -tiedoston. 
+Tässä kohtaa kohtasin ongelmia. Onnistuin luomaan tilan, joka asentaa ja käynnistää tulimuurin. Yritin tämän lisäksi tehdä reikää tulimuuriin. En kuitenkaan onnistunut tässä.
+
+        ufw:
+          pkg.installed
+
+        ufw Service:
+          service.running:
+            - name: ufw
+            - enable: True
+            - require:
+              - pkg: ufw
+
+        ufw Allow:
+          ufw.allow:
+            - port: 22
+            - proto: tcp
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/a601a386-f7f5-4c00-9081-e78310013f62)
+
+Tässä vaiheessa luovutin portina avaamisen automatisoinnin kanssa, ja avasin portin 22 manuaalisesti, jotta pystyn jatkamaan SSH-kirjautumista
+
+        $ sudo ufw allow 22/tcp
 
 ### Curl
 
