@@ -83,12 +83,13 @@ Loin uuden hakemiston /srv/salt/janika.com. Loin tähän hakemistoon uuden HTML-
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
 
-Tällä hetkellä tila asentaa Apachen, käynnistää sen, poistaa oletussivun (000-default) ja HTML-tiedoston sisältö näkyy sivulla. käytöstä.
-
+Tällä hetkellä tila asentaa Apachen ja käynnistää sen.
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/2324f023-f226-4275-8e2f-c32f794d2ef3)
 
 Seuraavaksi lähdin luomaan tilaa, joka asentaa ja konfiguroi tulimuurin.
 
+
 ### Lähteet
 
 https://www.linode.com/docs/guides/configure-apache-with-salt-stack/
+https://docs.saltproject.io/en/latest/ref/states/all/salt.states.firewall.html
