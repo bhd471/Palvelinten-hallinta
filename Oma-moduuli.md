@@ -59,12 +59,6 @@ Asensin Apachen ja curlin ensin manuaalisesti.
 
 Loin /srv/salt -hakemiston, johon loin apache.sls tiedoston. Loin tilan, joka asentaa Apachen ja tarkistaa, että weppipalvelin on päällä.
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/efddda4d-02b4-4af5-9703-c16ae4ca688a)
-
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/ce14c453-e5df-40cd-8eae-1d3b0ec8e409)
-
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/35df1216-9b60-4334-be6d-b86abaa7ed64)
-
 
 
 ![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/5d9cc730-ccee-4fe4-baf5-7c2879756787)
@@ -135,10 +129,20 @@ Lisäsin gitin top.sls -tiedostoon.
             - curl.curl
             - git.git
 
+### Micro
 
+Lähdin asentamaan Micro-editoria. Ensin manuaalisesti, sitten automatisoin asennuksen. Loin uuden hakemiston /srv/salt/micro, johon loin uuden micro.sls -tiedoston. 
+
+        micro:
+          pkg.installed
+
+        
 ## Lopputulos
 
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/6655eb41-2a21-4858-bdf5-107dfc3b0cb9)
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/9c49cdc5-779a-40a9-bd33-d4434cfa0cc3)
+
+![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/44c315cf-2265-4329-8d47-6e390b8a3d32)
 
 
 ### Lähteet
