@@ -44,7 +44,6 @@ Liitetään koneet yhteen lisäämällä masterin IP-osoite konfiguraatiotiedost
         $ sudoedit /etc/salt/minion
         $ sudo systemctl restart salt-minion.service
     
-![image](https://github.com/bhd471/Palvelinten-hallinta/assets/148760837/77779403-3935-4a0d-914a-079fcb482188)
 
 Hyväksytään orja-avain master koneella.
 
